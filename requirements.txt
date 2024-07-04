@@ -1,0 +1,6 @@
+dbt-duckdb
+duckdb
+pandas
+openpyxl
+xlsxwriter
+pyarrow

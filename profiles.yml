@@ -1,0 +1,22 @@
+external_data:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1
+      plugins:
+        - module: excel
+
+    prod:
+      type: duckdb
+      path: prod.duckdb
+      threads: 4
+      plugins:
+        - module: excel
+          config:
+            output: 
+              file: data/destination/orders.xlsx
+          
+              
+
+  target: dev

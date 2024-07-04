@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: excel_source_via_plugin
+    meta:
+      external_location: "data/source/{name}.xlsx"
+      plugin: excel
+    tables:
+      - name: raw_customers
+  
+  - name: excel_source_via_st_read
+    meta:
+      external_location: "st_read('data/source/{name}.xlsx')"
+    tables:
+      - name: raw_orders
+
+  - name: csv_source
+    meta:
+      external_location: "data/source/{name}.csv"
+    tables:
+      - name: raw_payments
