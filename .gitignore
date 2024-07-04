@@ -4,7 +4,7 @@ dbt_packages/
 logs/
 data/destination/*.csv
 data/destination/*.xlsx
-data/destination/*.parquet
+data/**/*.parquet
 
 *.duckdb
 .user.yml

@@ -31,6 +31,14 @@ models:
 
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
+    config:  
+      materialized: external
+      # location to which the `external` materialization writes and from where the plugin reads
+      location: 'data/tmp/orders.parquet'
+      plugin: custom_excel
+      overrides:
+        # the location to which the plugin writes
+        file: 'data/destination/orders.xlsx'
     columns:
       - name: order_id
         data_tests:

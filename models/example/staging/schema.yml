@@ -9,6 +9,10 @@ models:
           - not_null
 
   - name: stg_orders
+    config:
+      pre_hook:
+        sql: "LOAD spatial;"
+        transaction: True
     columns:
       - name: order_id
         data_tests:

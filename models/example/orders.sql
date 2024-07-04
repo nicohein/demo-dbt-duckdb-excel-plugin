@@ -1,11 +1,3 @@
-{{ 
-  config(
-    materialized='external',
-    plugin='excel',
-    location='data/destination/orders.parquet'
-  ) 
-}}
-
 {% set payment_methods = [
     'credit_card', 
     'coupon', 

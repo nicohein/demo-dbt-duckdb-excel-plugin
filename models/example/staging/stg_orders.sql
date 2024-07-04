@@ -1,12 +1,3 @@
-{{
-  config(
-    pre_hook={
-      "sql": "LOAD spatial;",
-      "transaction": True
-    },
-  )
-}}
-
 with source as (
 
     select * from {{ source('excel_source_via_st_read', 'raw_orders') }}

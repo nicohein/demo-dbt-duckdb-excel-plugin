@@ -5,6 +5,8 @@ external_data:
       path: dev.duckdb
       threads: 1
       plugins:
+        - module: plugins.excel
+          alias: custom_excel
         - module: excel
 
     prod:
@@ -12,11 +14,8 @@ external_data:
       path: prod.duckdb
       threads: 4
       plugins:
-        - module: excel
-          config:
-            output: 
-              file: data/destination/orders.xlsx
-          
-              
+        - module: plugins.excel
+          alias: custom_excel
+        - module: excel 
 
   target: dev
