@@ -16,7 +16,7 @@ class Plugin(ExcelPlugin):
         super().initialize(plugin_config)
 
     def load(self, source_config: SourceConfig):
-        super().load(source_config)
+        return super().load(source_config)
 
     def store(self, target_config: TargetConfig):
         plugin_output_config = {}
